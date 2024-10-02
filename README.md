@@ -1,36 +1,35 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+INNOVNEST
 
-## Getting Started
+InnovNest is a collaborative platform designed to help students and developers contribute to open-source projects and incomplete ideas. It links with GitHub repositories, allowing contributors to work on real-world projects, gain credentials, and improve their skills by collaborating with others.
 
-First, run the development server:
+PROJECT OVERVIEW
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+InnovNest enables users to:
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- Browse through various open projects.
+- View detailed project requirements and ideas.
+- Contribute to projects directly through GitHub integration.
+- Earn credentials for their contributions stored in the InnovNest database.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+FEATURES
+- User Authentication: Sign-up and sign-in using EmailJS.
+- Project Listings: Explore a list of available projects on the homepage.
+- Project Details: View detailed information about each project.
+- GitHub Integration: Seamlessly contribute to projects through GitHub.
+- Credentialing System: Logs user contributions and awards credentials.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+TECH STACK
+- Frontend: Next.js (React)
+- Backend: Node.js 
+- Database: MongoDB 
+- Styling: Tailwind CSS
+- Version Control: Git/GitHub
 
-## Learn More
+USAGE
+- Browse Projects: Users can browse through projects displayed on the homepage.
 
-To learn more about Next.js, take a look at the following resources:
+- Project Details: Clicking on a project shows detailed information and contribution ideas.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- Contribute: Click on the 'Contribute' button to be redirected to the GitHub repository.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- Track Contributions: Contributions will be logged in the InnovNest database, and credentials will be awarded to users.
