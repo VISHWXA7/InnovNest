@@ -15,6 +15,11 @@ export const sidebarLinks = [
       label: "Upload Project",
     },
     {
+      imgURL: "/assets/create.svg",
+      route: "/credentials",
+      label: "Credentials",
+    },
+    {
       imgURL: "/assets/user.svg",
       route: "/dashboard",
       label: "Dashboard",
