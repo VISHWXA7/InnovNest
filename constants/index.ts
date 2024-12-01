@@ -1,193 +1,103 @@
-export const navLinks = [
+export const sidebarLinks = [
     {
-      label: "Home",
+      imgURL: "/icons/home.svg",
       route: "/",
-      icon: "/assets/icons/home.svg",
+      label: "Home",
     },
     {
-      label: "Image Restore",
-      route: "/transformations/add/restore",
-      icon: "/assets/icons/image.svg",
+      imgURL: "/icons/discover.svg",
+      route: "/discover",
+      label: "Discover",
     },
     {
-      label: "Generative Fill",
-      route: "/transformations/add/fill",
-      icon: "/assets/icons/stars.svg",
-    },
-    {
-      label: "Object Remove",
-      route: "/transformations/add/remove",
-      icon: "/assets/icons/scan.svg",
-    },
-    {
-      label: "Object Recolor",
-      route: "/transformations/add/recolor",
-      icon: "/assets/icons/filter.svg",
-    },
-    {
-      label: "Background Remove",
-      route: "/transformations/add/removeBackground",
-      icon: "/assets/icons/camera.svg",
-    },
-    {
-      label: "Profile",
-      route: "/profile",
-      icon: "/assets/icons/profile.svg",
-    },
-    {
-      label: "Buy Credits",
-      route: "/credits",
-      icon: "/assets/icons/bag.svg",
+      imgURL: "/icons/microphone.svg",
+      route: "/create-podcast",
+      label: "Create Podcast",
     },
   ];
   
-  export const plans = [
+  export const voiceDetails = [
     {
-      _id: 1,
-      name: "Free",
-      icon: "/assets/icons/free-plan.svg",
-      price: 0,
-      credits: 20,
-      inclusions: [
-        {
-          label: "20 Free Credits",
-          isIncluded: true,
-        },
-        {
-          label: "Basic Access to Services",
-          isIncluded: true,
-        },
-        {
-          label: "Priority Customer Support",
-          isIncluded: false,
-        },
-        {
-          label: "Priority Updates",
-          isIncluded: false,
-        },
-      ],
+      id: 1,
+      name: "alloy",
     },
     {
-      _id: 2,
-      name: "Pro Package",
-      icon: "/assets/icons/free-plan.svg",
-      price: 40,
-      credits: 120,
-      inclusions: [
-        {
-          label: "120 Credits",
-          isIncluded: true,
-        },
-        {
-          label: "Full Access to Services",
-          isIncluded: true,
-        },
-        {
-          label: "Priority Customer Support",
-          isIncluded: true,
-        },
-        {
-          label: "Priority Updates",
-          isIncluded: false,
-        },
-      ],
+      id: 2,
+      name: "echo",
     },
     {
-      _id: 3,
-      name: "Premium Package",
-      icon: "/assets/icons/free-plan.svg",
-      price: 199,
-      credits: 2000,
-      inclusions: [
-        {
-          label: "2000 Credits",
-          isIncluded: true,
-        },
-        {
-          label: "Full Access to Services",
-          isIncluded: true,
-        },
-        {
-          label: "Priority Customer Support",
-          isIncluded: true,
-        },
-        {
-          label: "Priority Updates",
-          isIncluded: true,
-        },
-      ],
+      id: 3,
+      name: "fable",
+    },
+    {
+      id: 4,
+      name: "onyx",
+    },
+    {
+      id: 5,
+      name: "nova",
+    },
+    {
+      id: 6,
+      name: "shimmer",
     },
   ];
   
-  export const transformationTypes = {
-    restore: {
-      type: "restore",
-      title: "Restore Image",
-      subTitle: "Refine images by removing noise and imperfections",
-      config: { restore: true },
-      icon: "image.svg",
+  export const podcastData = [
+    {
+      id: 1,
+      title: "The Joe Rogan Experience",
+      description: "A long form, in-depth conversation",
+      imgURL:
+        "https://lovely-flamingo-139.convex.cloud/api/storage/3106b884-548d-4ba0-a179-785901f69806",
     },
-    removeBackground: {
-      type: "removeBackground",
-      title: "Background Remove",
-      subTitle: "Removes the background of the image using AI",
-      config: { removeBackground: true },
-      icon: "camera.svg",
+    {
+      id: 2,
+      title: "The Futur",
+      description: "This is how the news should sound",
+      imgURL:
+        "https://lovely-flamingo-139.convex.cloud/api/storage/16fbf9bd-d800-42bc-ac95-d5a586447bf6",
     },
-    fill: {
-      type: "fill",
-      title: "Generative Fill",
-      subTitle: "Enhance an image's dimensions using AI outpainting",
-      config: { fillBackground: true },
-      icon: "stars.svg",
+    {
+      id: 3,
+      title: "Waveform",
+      description: "Join Michelle Obama in conversation",
+      imgURL:
+        "https://lovely-flamingo-139.convex.cloud/api/storage/60f0c1d9-f2ac-4a96-9178-f01d78fa3733",
     },
-    remove: {
-      type: "remove",
-      title: "Object Remove",
-      subTitle: "Identify and eliminate objects from images",
-      config: {
-        remove: { prompt: "", removeShadow: true, multiple: true },
-      },
-      icon: "scan.svg",
+    {
+      id: 4,
+      title: "The Tech Talks Daily Podcast",
+      description: "This is how the news should sound",
+      imgURL:
+        "https://lovely-flamingo-139.convex.cloud/api/storage/5ba7ed1b-88b4-4c32-8d71-270f1c502445",
     },
-    recolor: {
-      type: "recolor",
-      title: "Object Recolor",
-      subTitle: "Identify and recolor objects from the image",
-      config: {
-        recolor: { prompt: "", to: "", multiple: true },
-      },
-      icon: "filter.svg",
+    {
+      id: 5,
+      title: "GaryVee Audio Experience",
+      description: "A long form, in-depth conversation",
+      imgURL:
+        "https://lovely-flamingo-139.convex.cloud/api/storage/ca7cb1a6-4919-4b2c-a73e-279a79ac6d23",
     },
-  };
-  
-  export const aspectRatioOptions = {
-    "1:1": {
-      aspectRatio: "1:1",
-      label: "Square (1:1)",
-      width: 1000,
-      height: 1000,
+    {
+      id: 6,
+      title: "Syntax ",
+      description: "Join Michelle Obama in conversation",
+      imgURL:
+        "https://lovely-flamingo-139.convex.cloud/api/storage/b8ea40c7-aafb-401a-9129-73c515a73ab5",
     },
-    "3:4": {
-      aspectRatio: "3:4",
-      label: "Standard Portrait (3:4)",
-      width: 1000,
-      height: 1334,
+    {
+      id: 7,
+      title: "IMPAULSIVE",
+      description: "A long form, in-depth conversation",
+      imgURL:
+        "https://lovely-flamingo-139.convex.cloud/api/storage/8a55d662-fe3f-4bcf-b78b-3b2f3d3def5c",
     },
-    "9:16": {
-      aspectRatio: "9:16",
-      label: "Phone Portrait (9:16)",
-      width: 1000,
-      height: 1778,
+    {
+      id: 8,
+      title: "Ted Tech",
+      description: "This is how the news should sound",
+      imgURL:
+        "https://lovely-flamingo-139.convex.cloud/api/storage/221ee4bd-435f-42c3-8e98-4a001e0d806e",
     },
-  };
-  
-  export const defaultValues = {
-    title: "",
-    aspectRatio: "",
-    color: "",
-    prompt: "",
-    publicId: "",
-  };
-  
-  export const creditFee = -1;
+  ];

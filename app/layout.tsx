@@ -1,18 +1,25 @@
 import type { Metadata } from "next";
-import { IBM_Plex_Sans } from "next/font/google";
+import localFont from "next/font/local";
 import "./globals.css";
-import { cn } from "@/lib/utils";
+import ConvexClerkProvider from "./providers/ConvexClerkProvider";
 
-const IBMPlex = IBM_Plex_Sans({
-  subsets: ["latin"],
-  variable: "--font-ibm-plex",
-  weight: ['400', '500', '600', '700'],
+const geistSans = localFont({
+  src: "./fonts/GeistVF.woff",
+  variable: "--font-geist-sans",
+  weight: "100 900",
+});
+const geistMono = localFont({
+  src: "./fonts/GeistMonoVF.woff",
+  variable: "--font-geist-mono",
+  weight: "100 900",
 });
 
-
 export const metadata: Metadata = {
-  title: "SaaS web",
-  description: "Underconstruction",
+  title: "InnovNest",
+  description: "Collaborative project platform",
+  icons: {
+    icon: '/icons/logo.svg'
+  }
 };
 
 export default function RootLayout({
@@ -23,9 +30,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={cn("font-IBMPlex antialiased", IBMPlex.variable)}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        {children}
+        <ConvexClerkProvider>
+          {children}
+        </ConvexClerkProvider>
       </body>
     </html>
   );

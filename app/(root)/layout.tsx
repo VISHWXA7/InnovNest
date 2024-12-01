@@ -1,19 +1,38 @@
-import MobileNav from '@/components/shared/MobileNav'
-import Sidebar  from '@/components/shared/Sidebar'
-import React from 'react'
+import LeftSidebar from "@/components/LeftSidebar";
+import MobileNav from "@/components/MobileNav";
+import RightSidebar from "@/components/RightSidebar";
+import Image from "next/image";
 
-const Layout = ({children}: {children: React.ReactNode}) => {
+export default function RootLayout({
+  children,
+}: Readonly<{
+  children: React.ReactNode;
+}>) {
   return (
-    <main className='root'>
-      <Sidebar />
-      <MobileNav />
-        <div className='root-container'>
-            <div className='wrapper'>
-              {children}
-            </div>
-        </div>
-    </main>
-  )
-}
+    <div className="relative flex flex-col">
+        <main className="relaative flex bg-black-3">
+            <LeftSidebar />
 
-export default Layout
+            <section className="flex min-h-screen flex-1 flex-col px-4 sm:px-14">
+                <div className="mx-auto flex w-full max-w-5xl flex-col max-sm:px-4">
+                  <div className="flex h-16 items-center justify-between md:hidden">
+                    <Image 
+                      src="/icons/logo.svg"
+                      alt="menu logo"
+                      width={30}
+                      height={30}
+                    />
+                    <MobileNav />
+                  </div>
+                  <div className="flex flex-col md:pb-14">
+                    Toaster (notification popups)
+                    {children}
+                  </div>
+                </div> 
+            </section>
+
+            <RightSidebar />
+        </main>
+    </div>
+  );
+}
